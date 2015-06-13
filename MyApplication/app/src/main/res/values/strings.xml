@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">action_settings</string>
+    <string name="Node1">Node1</string>
+    <string name="Node2">Node2</string>
+    <string name="Node3">Node3</string>
+    <string name="Router1">Router1</string>
+    <string name="Router2">Router2</string>
+    <string name="Router3">Router3</string>
+    <string name="Setting_NODE">Setting_NODE</string>
+    <string name="Setting_Router">Setting_Router</string>
+    <string name="About_Node">About Node</string>
+    <string name="About_Router">About Node</string>
+</resources>
