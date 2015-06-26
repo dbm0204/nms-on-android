@@ -40,7 +40,7 @@ import java.util.Map;
         private void showNodeManagerDialog( String filename)
         {
             FragmentManager fm = getFragmentManager();
-            mOpenDialog.show(fm, filename);
+            //mOpenDialog.show(fm, filename);
         }
 
         private abstract class DialogInputProcessor
@@ -55,7 +55,7 @@ import java.util.Map;
                 case R.id.add:
                     if (mOpenDialog != null)
                         mOpenDialog.dismiss();
-                    mOpenDialog = new AddDialog();
+                    //mOpenDialog = new AddDialog();
                     showNodeManagerDialog("fragment_add_node");
                     // showDialog(DIALOG_CHOICE);
                     // createDummyNode();
