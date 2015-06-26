@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NodeManager</string>
+    <string name="Add">Add</string>
+    <string name="Delete">Delete</string>
+    <string name="Node">Node</string>
+    <string name="Router">Router</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>
