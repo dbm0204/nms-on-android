@@ -2,6 +2,7 @@ package com.example.ben.nodemanager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.app.admin.DeviceAdminReceiver;
 import android.content.DialogInterface;
@@ -11,17 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import java.util.HashMap;
 import java.util.Map;
 
-    public class MainActivity extends Activity implements OnClickListener
+    public class MainActivity extends Activity implements OnClickListener, NodeManagerDialog.NodeManagerDialogListener
     {
 
-     //   final int DEL_DIALOG = 1;
-
+        //   final int DEL_DIALOG = 1;
         Button add, delete;
-        AlertDialog mOpenDialog;
+        NodeManagerDialog mOpenDialog;
         WorkSpace mWorkspace;
         private static final int DIALOG_CHOICE=20;
 
@@ -37,12 +36,6 @@ import java.util.Map;
             mWorkspace = (WorkSpace) findViewById(R.id.workspace);
         }
 
-        private void showNodeManagerDialog( String filename)
-        {
-            FragmentManager fm = getFragmentManager();
-            //mOpenDialog.show(fm, filename);
-        }
-
         private abstract class DialogInputProcessor
         {
             public abstract void process(View view);
@@ -55,15 +48,34 @@ import java.util.Map;
                 case R.id.add:
                     if (mOpenDialog != null)
                         mOpenDialog.dismiss();
-                    //mOpenDialog = new AddDialog();
-                    showNodeManagerDialog("fragment_add_node");
-                    // showDialog(DIALOG_CHOICE);
-                    // createDummyNode();
+
+                    mOpenDialog = new AddNodeDialog();
+                    mOpenDialog.show(getFragmentManager(), "dialog");
                     break;
                 case R.id.del:  break;
                 default:        break;
 
             }
+        }
+
+        @Override
+        public void onDialogPositiveClick(DialogFragment dialog, NodeManagerDialog.DialogType type)
+        {
+            switch (type)
+            {
+                case ADD_NODE_DIALOG:
+                    addNode(dialog.getView());
+                    break;
+                case DELTE_NODE_DIALOG:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        @Override
+        public void onDialogNegativeClick(DialogFragment dialog, NodeManagerDialog.DialogType type)
+        {
         }
 
         private void addNode(View view)
@@ -86,8 +98,6 @@ import java.util.Map;
             }
 
             mWorkspace.addNetworkComponent(type);
-
-
 
         }
 

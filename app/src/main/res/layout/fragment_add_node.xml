@@ -31,6 +31,7 @@
             android:checked="false" />
     </RadioGroup>
 
+    <!--
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -49,7 +50,6 @@
             android:text="@string/cancel"
             android:id="@+id/button2"
             android:onClick="onClickAddCancel"/>
-
-
     </LinearLayout>
+    -->
 </LinearLayout>
