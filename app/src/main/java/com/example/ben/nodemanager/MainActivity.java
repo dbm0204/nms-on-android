@@ -23,7 +23,8 @@ import java.util.Map;
         NodeManagerDialog mOpenDialog;
         WorkSpace mWorkspace;
         private static final int DIALOG_CHOICE=20;
-
+        private DrawableNetworkComponent.Type type;
+        private RadioGroup radio;
         @Override
         public void onCreate(Bundle savedInstanceState)
         {
@@ -34,6 +35,7 @@ import java.util.Map;
             delete = (Button) findViewById(R.id.del);
             delete.setOnClickListener((OnClickListener) this);
             mWorkspace = (WorkSpace) findViewById(R.id.workspace);
+            radio = (RadioGroup) view.findViewById(R.id.radio_node_type);
         }
 
         private abstract class DialogInputProcessor
@@ -63,13 +65,11 @@ import java.util.Map;
         {
             switch (type)
             {
-                case ADD_NODE_DIALOG:
-                    addNode(dialog.getView());
-                    break;
-                case DELTE_NODE_DIALOG:
-                    break;
-                default:
-                    break;
+                case ADD_NODE_DIALOG:   addNode(dialog.getView());
+                                        break;
+                case DELTE_NODE_DIALOG: break;
+                case UNKNOWN_DIALOG:    break;
+                default:                break;
             }
         }
 
@@ -80,21 +80,15 @@ import java.util.Map;
 
         private void addNode(View view)
         {
-            if (mWorkspace == null)
-                return;
-
-            DrawableNetworkComponent.Type type = DrawableNetworkComponent.Type.UNKNOWN;
-            RadioGroup radio = (RadioGroup) view.findViewById(R.id.radio_node_type);
+            if (mWorkspace == null) return;
+            type = DrawableNetworkComponent.Type.UNKNOWN;
             switch(radio.getCheckedRadioButtonId())
             {
-                case R.id.radio_user:
-                    type = DrawableNetworkComponent.Type.USER;
-                    break;
-                case R.id.radio_router:
-                    type = DrawableNetworkComponent.Type.ROUTER;
-                    break;
-                default:
-                    break;
+                case R.id.radio_user:   type = DrawableNetworkComponent.Type.USER;
+                                        break;
+                case R.id.radio_router: type = DrawableNetworkComponent.Type.ROUTER;
+                                        break;
+                default:                break;
             }
 
             mWorkspace.addNetworkComponent(type);

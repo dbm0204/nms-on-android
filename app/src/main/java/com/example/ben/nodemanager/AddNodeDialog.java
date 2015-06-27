@@ -13,9 +13,11 @@ import org.w3c.dom.Node;
 /**
  * Created by Ben on 6/27/2015.
  */
-public class AddNodeDialog extends NodeManagerDialog {
+public class AddNodeDialog extends NodeManagerDialog
+{
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
+    public Dialog onCreateDialog(Bundle savedInstanceState)
+    {
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
