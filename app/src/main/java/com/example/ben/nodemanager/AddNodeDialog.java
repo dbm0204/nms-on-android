@@ -7,12 +7,10 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-
 import org.w3c.dom.Node;
+import android.view.View;
 
-/**
- * Created by Ben on 6/27/2015.
- */
+
 public class AddNodeDialog extends NodeManagerDialog
 {
     @Override
@@ -26,13 +24,16 @@ public class AddNodeDialog extends NodeManagerDialog
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.fragment_add_node, null));
+        final View view = inflater.inflate(R.layout.fragment_add_node,null);
+        builder.setView(view);
 
-        builder.setMessage(R.string.Add)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+        builder.setMessage("Choose a type")
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
                         // Send the positive button event back to the host activity
-                        mListener.onDialogPositiveClick(AddNodeDialog.this, DialogType.ADD_NODE_DIALOG);
+                        mListener.onDialogPositiveClick(view, DialogType.ADD_NODE_DIALOG);
                         // FIRE ZE MISSILES!
                     }
                 })
@@ -40,7 +41,7 @@ public class AddNodeDialog extends NodeManagerDialog
                     public void onClick(DialogInterface dialog, int id) {
                         // User cancelled the dialog
                         // Send the negative button event back to the host activity
-                        mListener.onDialogNegativeClick(AddNodeDialog.this, DialogType.ADD_NODE_DIALOG);
+                        mListener.onDialogNegativeClick(view, DialogType.ADD_NODE_DIALOG);
                     }
                 });
         // Create the AlertDialog object and return it
@@ -52,13 +53,17 @@ public class AddNodeDialog extends NodeManagerDialog
 
     // Override the Fragment.onAttach() method to instantiate the NoticeDialogListener
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(Activity activity)
+    {
         super.onAttach(activity);
         // Verify that the host activity implements the callback interface
-        try {
+        try
+        {
             // Instantiate the NoticeDialogListener so we can send events to the host
             mListener = (NodeManagerDialogListener) activity;
-        } catch (ClassCastException e) {
+        }
+        catch (ClassCastException e)
+        {
             // The activity doesn't implement the interface, throw exception
             throw new ClassCastException(activity.toString()
                     + " must implement NodeManagerDialogListener");

@@ -1,54 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<RadioGroup
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:id="@+id/add_node"
-    tools:context="AddDialog.java">
-    <RadioGroup
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/radio_node_type">
+
+    <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/radio_node_type">
+        android:text="@string/Router"
+        android:id="@+id/radio_router"
+        android:checked="false" />
 
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Router"
-            android:id="@+id/radio_router"
-            android:checked="false" />
-
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Node"
-            android:id="@+id/radio_user"
-            android:checked="false" />
-    </RadioGroup>
-
-    <!--
-    <LinearLayout
+    <RadioButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok"
-            android:id="@+id/button"
-            android:onClick="onClickAddOk"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cancel"
-            android:id="@+id/button2"
-            android:onClick="onClickAddCancel"/>
-    </LinearLayout>
-    -->
-</LinearLayout>
+        android:text="@string/Node"
+        android:id="@+id/radio_user"
+        android:checked="false" />
+</RadioGroup>
