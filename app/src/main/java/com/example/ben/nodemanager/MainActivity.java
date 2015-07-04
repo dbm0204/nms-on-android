@@ -28,6 +28,14 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
             delete.setOnClickListener(this);
             mWorkspace = (WorkSpace) findViewById(R.id.workspace);
 
+            mWorkspace.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+
+                    return false;
+                }
+            });
+
         }
 
         @Override
