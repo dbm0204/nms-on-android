@@ -27,11 +27,13 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_launcher"/>
             <TextView
-                android:layout_width="356dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Description - A Network Management tool developed on Android platform which communicates with the local NMS server for performing network management functions. After creating a connection with the local NMS server, it enables user to perform several operations such as network discovery, service provisioning/de-provisioning, firmware upgrade etc. Offline network planning is also supported for ECR router family.
 
- Specifications - 1. Built for tablets with Android version 4.4 and above"/>
+ Specifications:
+
+ 1. Built for tablets with Android version 4.4 and above"/>
         </LinearLayout>
 
         <Button
