@@ -18,8 +18,7 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
         private static final int DIALOG_CHOICE=20;
 
         @Override
-        public void onCreate(Bundle savedInstanceState)
-        {
+        public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             add = (Button) findViewById(R.id.add);
@@ -27,17 +26,9 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
             delete = (Button) findViewById(R.id.del);
             delete.setOnClickListener(this);
             mWorkspace = (WorkSpace) findViewById(R.id.workspace);
-
-            mWorkspace.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-
-                    return false;
-                }
-            });
+            registerForContextMenu(mWorkspace);
 
         }
-
         @Override
         public void onClick(View v)
         {
