@@ -10,4 +10,7 @@
     <string name="footer">footer</string>
     <string name="delete_string">delete_string</string>
     <string name="Properties">Properties</string>
+    <string name="About">About</string>
+    <string name="Dismiss">Dismiss</string>
+    <string name="NodeManager">NodeManager</string>
 </resources>

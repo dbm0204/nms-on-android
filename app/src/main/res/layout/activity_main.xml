@@ -15,13 +15,19 @@
         <Button
             android:id="@+id/add"
             android:text="@string/Add"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+        <Button
+            android:id="@+id/del"
+            android:text="@string/Delete"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="bottom" />
         <Button
-            android:id="@+id/del"
-            android:text="@string/Delete"
+            android:id="@+id/about"
+            android:text="@string/About"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

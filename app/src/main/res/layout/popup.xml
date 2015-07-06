@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="1dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/NodeManager"
+            android:textSize="32sp"
+            android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"/>
+            <TextView
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:text="Description - A Network Management tool developed on Android platform which communicates with the local NMS server for performing network management functions. After creating a connection with the local NMS server, it enables user to perform several operations such as network discovery, service provisioning/de-provisioning, firmware upgrade etc. Offline network planning is also supported for ECR router family.
+
+ Specifications - 1. Built for tablets with Android version 4.4 and above"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dismiss"
+            android:text="@string/Dismiss"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</LinearLayout>
