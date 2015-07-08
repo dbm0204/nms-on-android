@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pos" />
+    <string-array name="menu">
+        <item>Add</item>
+        <item>Delete</item>
+        <item>About</item>
+    </string-array>
+</resources>

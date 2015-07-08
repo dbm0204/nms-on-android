@@ -1,7 +1,12 @@
 package com.example.ben.nodemanager;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.PopupMenu;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,7 +17,7 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
 {
 
         //   final int DEL_DIALOG = 1;
-        Button add, delete;
+        Button add, delete,about;
         NodeManagerDialog mOpenDialog;
         WorkSpace mWorkspace;
         private static final int DIALOG_CHOICE=20;
@@ -25,10 +30,11 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
             add.setOnClickListener(this);
             delete = (Button) findViewById(R.id.del);
             delete.setOnClickListener(this);
+            about=(Button) findViewById(R.id.about);
             mWorkspace = (WorkSpace) findViewById(R.id.workspace);
-            registerForContextMenu(mWorkspace);
-
+            about.setOnClickListener(this);
         }
+
         @Override
         public void onClick(View v)
         {
@@ -43,6 +49,10 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
                     mOpenDialog.show(getFragmentManager(), "dialog");
                     break;
                 case R.id.del:
+                    break;
+                case R.id.about:
+                    Intent myIntent = new Intent(MainActivity.this,About.class);
+                    startActivity(myIntent);
                     break;
                 default:
                     break;
