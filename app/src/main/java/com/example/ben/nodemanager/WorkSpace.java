@@ -4,21 +4,22 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import java.util.Vector;
 import android.util.Log;
+import java.util.Vector;
 
-public class WorkSpace extends View {
+public class WorkSpace extends View
+{
 
 
     private Vector<DrawableNetworkComponent> mComponents;
-    private void init(Context context)
-    {
+    private void init(Context context) {
         setFocusable(true);
         setWillNotDraw(false);
         mComponents = new Vector<DrawableNetworkComponent>();
     }
 
-    public WorkSpace(Context context){
+    public WorkSpace(Context context)
+    {
         super(context);
         init(context);
     }

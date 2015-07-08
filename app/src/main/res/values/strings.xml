@@ -20,4 +20,7 @@
 
 
         1. Built for tablets with Android version 4.4 and above"</string>
+    <string name="start">Start Connection</string>
+    <string name="end">End Connection</string>
+    <string name="prop">Properties</string>
 </resources>

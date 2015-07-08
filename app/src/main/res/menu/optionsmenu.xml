@@ -5,20 +5,20 @@
 
 
     <item
-        android:id="@+id/one"
-        android:title="Start Connection"
+        android:id="@+id/start"
+        android:title="@string/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <item
-        android:id="@+id/two"
-        android:title="End Connection"
+        android:id="@+id/end"
+        android:title="@string/end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <item
-        android:id="@+id/three"
-        android:title="Properties"
+        android:id="@+id/prop"
+        android:title="@string/prop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

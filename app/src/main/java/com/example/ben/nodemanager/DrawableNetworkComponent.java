@@ -1,8 +1,8 @@
 package com.example.ben.nodemanager;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Point;
+import android.support.v7.internal.widget.TintImageView;
 import android.widget.ImageView;
 import android.graphics.Rect;
 import android.util.Log;
@@ -29,8 +29,7 @@ public class DrawableNetworkComponent extends Drawable
                             break;
             case USER:      loadImage(context, R.drawable.ic_node);
                             break;
-            default:
-                            loadImage(context, R.drawable.ic_launcher);
+            default:        loadImage(context, R.drawable.ic_launcher);
                             break;
         }
     }

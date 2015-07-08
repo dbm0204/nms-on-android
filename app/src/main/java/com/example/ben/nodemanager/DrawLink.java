@@ -33,7 +33,6 @@ public class DrawLink extends Activity
 
         }
         mPoint [] mPath;
-        //={new mPoint(199,200)};
         public MyView(Context context)
         {
             super(context);
@@ -44,7 +43,7 @@ public class DrawLink extends Activity
           super.onDraw(canvas);
             Paint paint = new Paint();
             paint.setColor(Color.GREEN);
-            paint.setStrokeWidth(3);
+            paint.setStrokeWidth(4);
             Path path =new Path();
 
             path.moveTo(mPath[0].x,mPath[0].y);

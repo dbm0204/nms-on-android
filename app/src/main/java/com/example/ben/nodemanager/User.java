@@ -9,4 +9,5 @@ public class User extends DrawableNetworkComponent
     {
         super(context, Type.USER);
     }
+
 }
