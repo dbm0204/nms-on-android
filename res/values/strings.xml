@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">NodeManager</string>
+    <string name="Add">Add</string>
+    <string name="Delete">Delete</string>
+    <string name="Node">Node</string>
+    <string name="Router">Router</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="footer">footer</string>
+    <string name="delete_string">delete_string</string>
+    <string name="Properties">Properties</string>
+    <string name="About">About</string>
+    <string name="Dismiss">Dismiss</string>
+    <string name="NodeManager">NodeManager</string>
+    <string name="desc">"Description - A Network Management tool developed on Android platform which communicates with the local NMS server for performing network management functions. After creating a connection with the local NMS server, it enables user to perform several operations such as network discovery, service provisioning/de-provisioning, firmware upgrade etc. Offline network planning is also supported for ECR router family.
+
+
+        Specifications:
+
+
+        1. Built for tablets with Android version 4.4 and above"</string>
+    <string name="start">Start Connection</string>
+    <string name="end">End Connection</string>
+    <string name="prop">Properties</string>
+</resources>
