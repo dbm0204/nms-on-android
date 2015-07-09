@@ -34,7 +34,7 @@
             android:layout_gravity="bottom" />
     </LinearLayout>
 
-    <com.example.ben.nodemanager.WorkSpace
+    <nms.canvas.WorkSpace
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/workspace"
         android:layout_height= "wrap_content"

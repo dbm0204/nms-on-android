@@ -1,13 +1,11 @@
-package com.example.ben.nodemanager;
+package nms.main;
+
+import nms.graphics.DrawableNetworkComponent;
 import android.content.Context;
-import android.widget.ImageView;
-public class Router extends DrawableNetworkComponent
-{
-    public Router(Context context)
-    {
-        super(context, Type.ROUTER);
-    }
 
-
+public class Router extends DrawableNetworkComponent {
+	public Router(Context context) {
+		super(context, Type.ROUTER);
+	}
 
 }
