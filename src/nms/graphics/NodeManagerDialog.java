@@ -1,5 +1,4 @@
 package nms.graphics;
-
 import android.app.DialogFragment;
 import android.view.View;
 
@@ -7,8 +6,11 @@ import android.view.View;
  * Created by Ben on 6/27/2015.
  */
 public class NodeManagerDialog extends DialogFragment {
-	public enum DialogType {
-		ADD_NODE_DIALOG, DELTE_NODE_DIALOG, UNKNOWN_DIALOG
+	public enum DialogType
+	{
+		ADD_NODE_DIALOG,
+		DELTE_NODE_DIALOG,
+		UNKNOWN_DIALOG
 	}
 
 	/*

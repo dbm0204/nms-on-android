@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+
 public class AddNodeDialog extends NodeManagerDialog {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
