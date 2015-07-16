@@ -1,4 +1,4 @@
-package nms.canvas;
+package app.nms.canvas;
 
 import android.graphics.Color;
 import android.graphics.Paint;

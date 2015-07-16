@@ -1,23 +1,15 @@
-package nms.utils;
+package app.nms.utils;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.support.v7.internal.widget.AdapterViewCompat;
-import android.support.v7.internal.widget.AdapterViewCompat.AdapterContextMenuInfo;
-import android.view.ContextMenu;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.example.ben.nodemanager.R.*;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import app.nms.R.id;
+import app.nms.R.layout;
+import app.nms.canvas.WorkSpace;
 public class Context extends Activity
 {
     private WorkSpace mWorkspace;

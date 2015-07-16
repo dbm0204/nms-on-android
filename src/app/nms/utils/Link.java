@@ -1,4 +1,4 @@
-package nms.utils;
+package app.nms.utils;
 
 import android.app.Activity;
 import android.content.Context;
