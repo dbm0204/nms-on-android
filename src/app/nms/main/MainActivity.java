@@ -1,4 +1,4 @@
-package app.nms.main;
+package com.example.ben.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,12 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioGroup;
-import app.nms.R;
-import app.nms.canvas.WorkSpace;
-import app.nms.graphics.AddNodeDialog;
-import app.nms.graphics.DrawableNetworkComponent;
-import app.nms.graphics.NodeManagerDialog;
-import app.nms.help.About;
+import org.w3c.dom.Node;
 
 public class MainActivity extends Activity implements OnClickListener, NodeManagerDialog.NodeManagerDialogListener
 {
@@ -52,9 +47,8 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
                     break;
                 case R.id.del:
                     break;
-                case R.id.about:
-                    Intent myIntent =new Intent(MainActivity.this,About.class);
-                    startActivity(myIntent);
+                case R.id.about:Intent myIntent =new Intent(MainActivity.this,About.class);
+                                startActivity(myIntent);
                 default:
                     break;
 
@@ -92,6 +86,8 @@ public class MainActivity extends Activity implements OnClickListener, NodeManag
             }
 
             mWorkspace.addNetworkComponent(type);
+
         }
+
 
     }
