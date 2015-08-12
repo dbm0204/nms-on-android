@@ -1,6 +1,9 @@
-package com.example.ben.myapplication;
-
+//package com.example.ben.myapplication;
+package app.nms.main;
 import android.content.Context;
+
+import app.nms.graphics.DrawableNetworkComponent;
+import app.nms.utils.Link;
 
 
 public class User extends DrawableNetworkComponent implements Comparable<User> {

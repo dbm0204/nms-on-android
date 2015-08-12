@@ -30,8 +30,7 @@ public class AddNodeDialog extends NodeManagerDialog {
 							public void onClick(DialogInterface dialog, int id) {
 								// Send the positive button event back to the
 								// host activity
-								mListener.onDialogPositiveClick(view,
-										DialogType.ADD_NODE_DIALOG);
+								mListener.onDialogPositiveClick(view);
 								// FIRE ZE MISSILES!
 							}
 						})
@@ -41,8 +40,7 @@ public class AddNodeDialog extends NodeManagerDialog {
 								// User cancelled the dialog
 								// Send the negative button event back to the
 								// host activity
-								mListener.onDialogNegativeClick(view,
-										DialogType.ADD_NODE_DIALOG);
+								mListener.onDialogNegativeClick();
 							}
 						});
 		// Create the AlertDialog object and return it

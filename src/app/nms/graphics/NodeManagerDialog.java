@@ -9,7 +9,10 @@ public class NodeManagerDialog extends DialogFragment {
 	public enum DialogType
 	{
 		ADD_NODE_DIALOG,
-		DELTE_NODE_DIALOG,
+		DELETE_NODE_DIALOG,
+		SOURCE_NODE_DIALOG,
+        DEST_NODE_DIALOG,
+		SHORTEST_PATH_RESULT_DIALOG,
 		UNKNOWN_DIALOG
 	}
 
@@ -19,8 +22,8 @@ public class NodeManagerDialog extends DialogFragment {
 	 * passes the DialogFragment in case the host needs to query it.
 	 */
 	public interface NodeManagerDialogListener {
-		public void onDialogPositiveClick(View view, DialogType type);
+		public void onDialogPositiveClick(View view);
 
-		public void onDialogNegativeClick(View view, DialogType type);
+		public void onDialogNegativeClick();
 	}
 }

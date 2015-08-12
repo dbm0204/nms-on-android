@@ -9,14 +9,20 @@ import android.graphics.Paint;
 public class StyleCache {
     public static final Paint mPaintTmpLink;
     public static final Paint mPaintPermLink;
+    public static final Paint mPaintShortestPath;
 
     static {
         mPaintPermLink = new Paint();
         mPaintPermLink.setColor(Color.RED);
-        mPaintPermLink.setStrokeWidth(3);
+        mPaintPermLink.setStrokeWidth(4);
 
         mPaintTmpLink = new Paint();
         mPaintTmpLink.setColor(Color.GREEN);
         mPaintTmpLink.setStrokeWidth(2);
+
+        mPaintShortestPath = new Paint();
+        mPaintShortestPath.setColor(Color.BLUE);
+        mPaintShortestPath.setStrokeWidth(6);
+
     }
 }
