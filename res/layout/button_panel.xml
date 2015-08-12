@@ -10,28 +10,29 @@
         android:id="@+id/add"
         android:text="@string/Add"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom" 
+/>
     <Button
         android:id="@+id/del"
-        android:text="@string/Delete"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:text="@string/Delete"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:layout_gravity="bottom" />
     <Button
         android:id="@+id/route"
         android:text="@string/route_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:layout_gravity="bottom" />
     <Button
         android:id="@+id/about"
         android:text="@string/About"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:layout_gravity="bottom" />
 </LinearLayout>

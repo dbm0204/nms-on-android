@@ -210,7 +210,7 @@ public class WorkSpace extends View implements OnLongClickListener
 
         mChosenComponent = -1;
     }
-    private static final int MIN_TIME_FORLONG_CLICK = 4000;
+    private static final int MIN_TIME_FORLONG_CLICK = 2000;
     private long mClickStartTime = 0;
     private boolean mFirstTouchMove = true;
     @Override
