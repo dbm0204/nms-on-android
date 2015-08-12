@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/button_panel"
+    android:weightSum="10">
+    <ImageButton
+        android:id="@+id/select_no"
+        android:text="@string/no"
+        android:layout_width="0dp"
+        android:src="@drawable/back_button"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:contentDescription="@string/back_button"/>
+    <TextView
+        android:id="@+id/user_message"
+        android:text="@string/default_message"
+        android:padding="4dp"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/select_yes"
+        android:text="@string/yes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="end" />
+
+</LinearLayout>
